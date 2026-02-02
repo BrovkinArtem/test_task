@@ -1,0 +1,61 @@
+@use '../../styles/variables.scss' as *;
+
+.pagination-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  height: 48px;
+  min-width: 48px;
+  background: $color-bg-secondary;
+  border: none;
+  border-radius: $border-radius-md;
+  cursor: pointer;
+  transition: background-color $transition-base;
+  font-family: $font-family-base;
+  font-weight: 400;
+  font-size: $font-size-xl;
+  line-height: 1.5;
+  color: $color-text-secondary;
+
+  &:hover:not(:disabled) {
+    background: $color-bg-hover;
+  }
+
+  &--active {
+    background: $color-bg-active;
+    color: $color-text-primary;
+    font-weight: 400;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: $breakpoint-md) {
+    height: 40px;
+    min-width: 40px;
+    padding: 10px;
+    font-size: $font-size-lg;
+    gap: $spacing-sm;
+  }
+  
+  @media (max-width: $breakpoint-sm) {
+    height: 32px;
+    min-width: 32px;
+    padding: 6px;
+    font-size: $font-size-base;
+    gap: $spacing-xs;
+  }
+  
+  @media (max-width: $breakpoint-xs) {
+    height: 28px;
+    min-width: 28px;
+    padding: $spacing-xs;
+    font-size: $font-size-sm;
+    gap: 2px;
+  }
+}
+

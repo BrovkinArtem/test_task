@@ -1,0 +1,37 @@
+@use './styles/variables.scss' as *;
+
+.app {
+  min-height: 100vh;
+  background: $color-bg-primary;
+  padding: $spacing-xl;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  
+  @media (max-width: $breakpoint-sm) {
+    padding: $spacing-md;
+  }
+}
+
+.app__container {
+  width: 100%;
+  max-width: 1512px;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+  overflow: hidden;
+  box-sizing: border-box;
+  
+  @media (max-width: $breakpoint-sm) {
+    gap: $spacing-md;
+  }
+}
+
+.app__pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: $spacing-md;
+  border-radius: $border-radius-md;
+  width: 100%;
+}

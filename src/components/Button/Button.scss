@@ -1,0 +1,99 @@
+@use '../../styles/variables.scss' as *;
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: $spacing-base $spacing-md;
+  border: none;
+  border-radius: $border-radius-md;
+  cursor: pointer;
+  font-family: $font-family-base;
+  font-weight: 600;
+  font-size: $font-size-xl;
+  line-height: 1.5;
+  transition: opacity $transition-base;
+
+  &--primary {
+    background: $color-bg-active;
+    color: $color-text-primary;
+  }
+
+  &--secondary {
+    background: $color-bg-secondary;
+    color: $color-text-secondary;
+  }
+
+  &--sm {
+    padding: $spacing-sm 12px;
+    font-size: $font-size-lg;
+  }
+
+  &--md {
+    padding: 10px 14px;
+    font-size: $font-size-lg;
+  }
+
+  &--lg {
+    padding: $spacing-base $spacing-md;
+    height: 48px;
+    font-size: $font-size-xl;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    opacity: 0.9;
+  }
+  
+  @media (max-width: $breakpoint-md) {
+    padding: 10px 14px;
+    font-size: $font-size-lg;
+    gap: 10px;
+  }
+  
+  @media (max-width: $breakpoint-sm) {
+    padding: $spacing-sm 12px;
+    font-size: $font-size-base;
+    gap: $spacing-sm;
+  }
+  
+  @media (max-width: $breakpoint-xs) {
+    padding: 6px 10px;
+    font-size: $font-size-md;
+    gap: 6px;
+  }
+}
+
+.button__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  
+  @media (max-width: 1200px) {
+    width: 20px;
+    height: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    width: 18px;
+    height: 18px;
+  }
+  
+  @media (max-width: 480px) {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.button__text {
+  white-space: nowrap;
+}
+

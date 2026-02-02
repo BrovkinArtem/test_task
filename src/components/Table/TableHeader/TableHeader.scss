@@ -1,0 +1,24 @@
+@use '../../../styles/variables.scss' as *;
+
+.table-header {
+  display: flex;
+  align-items: center;
+  min-width: fit-content;
+  width: 100%;
+  background: transparent;
+  border-radius: 8px;
+}
+
+.table-header__fixed {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.table-header__scrollable {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: fit-content;
+}

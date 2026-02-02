@@ -1,0 +1,60 @@
+@use '../../styles/variables.scss' as *;
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  width: 100%;
+  
+  @media (max-width: 768px) {
+    gap: 8px;
+  }
+}
+
+.pagination__buttons {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  flex-wrap: wrap; // Перенос кнопок на новую строку при необходимости
+  justify-content: center;
+  
+  @media (max-width: $breakpoint-md) {
+    gap: 12px;
+  }
+  
+  @media (max-width: $breakpoint-sm) {
+    gap: $spacing-sm;
+  }
+  
+  @media (max-width: $breakpoint-xs) {
+    gap: $spacing-xs;
+  }
+}
+
+.pagination__text {
+  font-family: $font-family-base;
+  font-weight: 400;
+  font-size: $font-size-xl;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: $spacing-md;
+  text-align: center;
+  
+  @media (max-width: $breakpoint-md) {
+    font-size: $font-size-lg;
+    margin-top: 12px;
+  }
+  
+  @media (max-width: $breakpoint-sm) {
+    font-size: $font-size-base;
+    margin-top: $spacing-sm;
+  }
+  
+  @media (max-width: $breakpoint-xs) {
+    font-size: $font-size-sm;
+    margin-top: 6px;
+  }
+}
+
